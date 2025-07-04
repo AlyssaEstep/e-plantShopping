@@ -2,18 +2,23 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeItem, updateQuantity } from './CartSlice';
 import './CartItem.css';
-
+import {incrementItemQuantity, decrementItemQuantity,changeItemQuantity} from '../redux/cartActions';
 const CartItem = ({ onContinueShopping }) => {
   const cart = useSelector(state => state.cart.items);
   const dispatch = useDispatch();
+  const cartItems = [
+    {name: 'Spider Plant', amount: 12.00},
+    {name: 'Peach Lily', amount: 18.00},
+    {name:'Snake Plant', amount: 15.00},
+    ];
 
   // Calculate total amount for all products in the cart
   const calculateTotalAmount = () => {
- 
+   const total = calculateTotalAmount(cartItems);
   };
 
   const handleContinueShopping = (e) => {
-   
+   const onCountinueShopping(e) 
   };
 
 
