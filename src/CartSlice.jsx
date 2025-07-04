@@ -7,6 +7,7 @@ const handleAddToCart = (product) => {
     [product.name]: true, // Set the current product's name as a key with value 'true' to mark it as added
   }));
 };
+dispatch(updateQuantity({ name: item.name, quantity: item.quantity + 1 }));
 export const CartSlice = createSlice({
   name: 'cart',
   initialState: {
