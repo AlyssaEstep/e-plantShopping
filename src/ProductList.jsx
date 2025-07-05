@@ -52,26 +52,7 @@ function ProductList() {
     </div>
   </div>
 ))}
-    <div className="product-list">
-      <h2>Available Plants</h2>
-      <div>Total items in cart: {calculateTotalQuantity()}</div>
-      <ul>
-        {products.map(product => (
-          <li key={product.name} className="product-item">
-            <img src={product.image} alt={product.name} width={100} />
-            <div>{product.name}</div>
-            <div>{product.cost}</div>
-            <button
-              onClick={() => handleAddToCart(product)}
-              disabled={addedToCart[product.name]}
-            >
-              {addedToCart[product.name] ? 'Added' : 'Add to cart'}
-            </button>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+  )
 }
 
 export default ProductList;
